@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Hisham | Cybersecurity Student & Intern Candidate</title>
+    <meta name="description" content="Cybersecurity student pursuing a B.Sc. in Computer Science with Cybersecurity, with practical exposure to Linux, networking, Nmap, Wireshark, VirtualBox, and OWASP Top 10.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        accent: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    },
+                    boxShadow: {
+                        'card': '0 2px 10px -2px rgba(15, 23, 42, 0.05), 0 4px 6px -4px rgba(15, 23, 42, 0.02)',
+                        'card-hover': '0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-navy-50 text-navy-900 font-sans antialiased selection:bg-accent-100 selection:text-accent-700">
+    
+    <!-- Custom Cursor (Desktop) -->
+    <div class="cursor-dot hidden lg:block"></div>
+    <div class="cursor-outline hidden lg:block"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-navy-100 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#home" class="text-xl font-bold tracking-tight text-navy-900 flex items-center gap-2 group">
+                    <span class="w-8 h-8 rounded-lg bg-navy-900 text-white flex items-center justify-center font-bold text-sm group-hover:bg-accent-600 transition-colors">MH</span>
+                    Mohammed Hisham
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-medium text-navy-600 hover:text-accent-600 transition-colors">Home</a>
+                    <a href="#about" class="text-sm font-medium text-navy-600 hover:text-accent-600 transition-colors">About</a>
+                    <a href="#skills" class="text-sm font-medium text-navy-600 hover:text-accent-600 transition-colors">Skills</a>
+                    <a href="#projects" class="text-sm font-medium text-navy-600 hover:text-accent-600 transition-colors">Projects</a>
+                    <a href="#practice" class="text-sm font-medium text-navy-600 hover:text-accent-600 transition-colors">Practice</a>
+                    <a href="#interests" class="text-sm font-medium text-navy-600 hover:text-accent-600 transition-colors">Interests</a>
+                    <a href="#contact" class="text-sm font-medium text-navy-600 hover:text-accent-600 transition-colors">Contact</a>
+                    <a href="#" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-navy-900 hover:bg-accent-600 transition-all shadow-sm">
+                        <i data-lucide="download" class="w-4 h-4 mr-2"></i>
+                        Download Resume
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-navy-900 hover:text-accent-600 p-2 rounded-md">
+                        <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-b border-navy-100 absolute w-full left-0 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#home" class="block px-3 py-3 rounded-md text-base font-medium text-navy-900 hover:bg-navy-50 hover:text-accent-600 mobile-link">Home</a>
+                <a href="#about" class="block px-3 py-3 rounded-md text-base font-medium text-navy-900 hover:bg-navy-50 hover:text-accent-600 mobile-link">About</a>
+                <a href="#skills" class="block px-3 py-3 rounded-md text-base font-medium text-navy-900 hover:bg-navy-50 hover:text-accent-600 mobile-link">Skills</a>
+                <a href="#projects" class="block px-3 py-3 rounded-md text-base font-medium text-navy-900 hover:bg-navy-50 hover:text-accent-600 mobile-link">Projects</a>
+                <a href="#practice" class="block px-3 py-3 rounded-md text-base font-medium text-navy-900 hover:bg-navy-50 hover:text-accent-600 mobile-link">Practice</a>
+                <a href="#interests" class="block px-3 py-3 rounded-md text-base font-medium text-navy-900 hover:bg-navy-50 hover:text-accent-600 mobile-link">Interests</a>
+                <a href="#contact" class="block px-3 py-3 rounded-md text-base font-medium text-navy-900 hover:bg-navy-50 hover:text-accent-600 mobile-link">Contact</a>
+                <div class="pt-4 pb-2 px-3">
+                    <a href="#" class="w-full flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-navy-900 hover:bg-accent-600 transition-colors">
+                        <i data-lucide="download" class="w-5 h-5 mr-2"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto min-h-[90vh] flex flex-col justify-center reveal-up">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-50 text-accent-700 text-sm font-medium mb-6 border border-accent-100">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                    Available for Internships
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-navy-900 mb-4 leading-tight">
+                    Mohammed Hisham
+                </h1>
+                <h2 class="text-xl sm:text-2xl font-medium text-navy-600 mb-6">
+                    Cybersecurity Student | SOC & Network Security Intern Candidate
+                </h2>
+                
+                <p class="text-lg text-navy-800/80 mb-10 leading-relaxed max-w-2xl">
+                    Cybersecurity student pursuing a B.Sc. in Computer Science with Cybersecurity, with practical exposure to Linux, networking, Nmap, Wireshark, VirtualBox, and the OWASP Top 10. Interested in SOC operations, threat monitoring, vulnerability assessment, network security, and ethical hacking.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                    <a href="#projects" class="inline-flex justify-center items-center px-6 py-3.5 border border-transparent text-base font-medium rounded-md text-white bg-accent-600 hover:bg-accent-700 transition-colors shadow-sm w-full sm:w-auto">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="inline-flex justify-center items-center px-6 py-3.5 border border-navy-200 text-base font-medium rounded-md text-navy-900 bg-white hover:bg-navy-50 hover:border-navy-300 transition-all shadow-sm w-full sm:w-auto">
+                        Contact Me
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-6">
+                    <a href="https://github.com/mohammedhisham962-sys" target="_blank" rel="noopener noreferrer" class="text-navy-400 hover:text-navy-900 transition-colors">
+                        <i data-lucide="github" class="w-7 h-7"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohammed-hisham-00314737a" target="_blank" rel="noopener noreferrer" class="text-navy-400 hover:text-accent-600 transition-colors">
+                        <i data-lucide="linkedin" class="w-7 h-7"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white border-y border-navy-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal-up">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+                    
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight text-navy-900 mb-8 flex items-center gap-3">
+                            <i data-lucide="user" class="w-6 h-6 text-accent-600"></i>
+                            About Me
+                        </h2>
+                        <div class="text-lg text-navy-800/80 leading-relaxed space-y-5">
+                            <p>
+                                I am a B.Sc. Computer Science with Cybersecurity student focused on developing practical cybersecurity and technical skills. My learning interests include network security, SOC operations, threat monitoring, vulnerability assessment, ethical hacking, digital forensics, and cloud security.
+                            </p>
+                            <p>
+                                I have practical exposure to Linux, networking concepts, security tools such as Nmap and Wireshark, VirtualBox-based lab environments, and the OWASP Top 10. I also build web-based projects that help me strengthen my development and problem-solving skills.
+                            </p>
+                            <p>
+                                I am currently looking for opportunities where I can learn from experienced security professionals, contribute to real-world projects, and continue developing practical cybersecurity skills.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-10">
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900 mb-6 flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-5 h-5 text-accent-600"></i>
+                                Education
+                            </h3>
+                            <div class="bg-navy-50 rounded-xl p-6 border border-navy-100 shadow-sm">
+                                <h4 class="text-lg font-semibold text-navy-900 mb-1">B.Sc. Computer Science with Cybersecurity</h4>
+                                <p class="text-navy-600 mb-4">Nilgiri College of Arts and Science<br>Thaloor, The Nilgiris, Tamil Nadu, India</p>
+                                <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-white border border-navy-200 text-sm font-medium text-navy-700 shadow-sm">
+                                    <span class="w-2 h-2 rounded-full bg-accent-500"></span>
+                                    Currently Pursuing
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xl font-bold text-navy-900 mb-6 flex items-center gap-2">
+                                <i data-lucide="target" class="w-5 h-5 text-accent-600"></i>
+                                Currently Focused On
+                            </h3>
+                            <div class="bg-white rounded-xl p-6 border border-navy-100 shadow-card">
+                                <p class="text-navy-800/80 leading-relaxed">
+                                    Building stronger practical cybersecurity skills through security labs, networking, Linux, vulnerability assessment, and security tool usage while developing a deeper understanding of SOC operations and threat monitoring.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <div class="reveal-up">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight text-navy-900 mb-4">Technical Skills</h2>
+                    <p class="text-lg text-navy-600 max-w-2xl mx-auto">Core competencies and technical foundations developed through coursework and practical labs.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Cybersecurity -->
+                    <div class="bg-white p-6 rounded-xl border border-navy-100 shadow-card hover:shadow-card-hover transition-shadow duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-accent-50 flex items-center justify-center mb-6 border border-accent-100">
+                            <i data-lucide="shield" class="w-6 h-6 text-accent-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy-900 mb-4">Cybersecurity</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>Cybersecurity Fundamentals</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>OWASP Top 10</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>Basic Vulnerability Assessment</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>Threat Analysis</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Networking -->
+                    <div class="bg-white p-6 rounded-xl border border-navy-100 shadow-card hover:shadow-card-hover transition-shadow duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-accent-50 flex items-center justify-center mb-6 border border-accent-100">
+                            <i data-lucide="network" class="w-6 h-6 text-accent-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy-900 mb-4">Networking</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>TCP/IP</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>IP Addressing</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>Basic Network Security</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>Network Traffic Fundamentals</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Security Tools -->
+                    <div class="bg-white p-6 rounded-xl border border-navy-100 shadow-card hover:shadow-card-hover transition-shadow duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-accent-50 flex items-center justify-center mb-6 border border-accent-100">
+                            <i data-lucide="wrench" class="w-6 h-6 text-accent-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy-900 mb-4">Security Tools</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>Nmap</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>Wireshark</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>Linux Terminal</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Systems -->
+                    <div class="bg-white p-6 rounded-xl border border-navy-100 shadow-card hover:shadow-card-hover transition-shadow duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-accent-50 flex items-center justify-center mb-6 border border-accent-100">
+                            <i data-lucide="server" class="w-6 h-6 text-accent-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy-900 mb-4">Systems</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>Linux</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>Windows</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>VirtualBox</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Programming -->
+                    <div class="bg-white p-6 rounded-xl border border-navy-100 shadow-card hover:shadow-card-hover transition-shadow duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-accent-50 flex items-center justify-center mb-6 border border-accent-100">
+                            <i data-lucide="code-2" class="w-6 h-6 text-accent-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy-900 mb-4">Programming</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>Python</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>C</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Web & Version Control -->
+                    <div class="bg-white p-6 rounded-xl border border-navy-100 shadow-card hover:shadow-card-hover transition-shadow duration-300">
+                        <div class="w-12 h-12 rounded-lg bg-accent-50 flex items-center justify-center mb-6 border border-accent-100">
+                            <i data-lucide="globe" class="w-6 h-6 text-accent-600"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy-900 mb-4">Web & Version Control</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>HTML</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>CSS</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>Git</span></li>
+                            <li class="flex items-start gap-2.5 text-navy-700"><i data-lucide="check" class="w-5 h-5 text-accent-500 shrink-0"></i> <span>GitHub</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 bg-white border-y border-navy-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal-up">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold tracking-tight text-navy-900 mb-4">Projects</h2>
+                    <p class="text-lg text-navy-600 max-w-2xl mx-auto">Practical implementations focused on security, automation, and problem-solving.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <div class="flex flex-col bg-navy-50 rounded-2xl border border-navy-100 overflow-hidden shadow-sm hover:shadow-card-hover transition-all duration-300">
+                        <div class="p-8 flex-grow">
+                            <div class="w-14 h-14 rounded-xl bg-navy-900 text-white flex items-center justify-center mb-6">
+                                <i data-lucide="cpu" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy-900 mb-2">AIGRA</h3>
+                            <p class="text-xs font-semibold text-accent-600 mb-4 uppercase tracking-wider">Artificial Intelligence Guided Risk and Analysis</p>
+                            <p class="text-navy-700 mb-6 leading-relaxed">
+                                Developed a centralized web-based platform for cybersecurity tools and learning resources.
+                            </p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-navy-700">
+                                    <i data-lucide="chevron-right" class="w-5 h-5 text-accent-500 shrink-0 mt-0.5"></i>
+                                    <span>Integrated security-focused tools and resources to support practical cybersecurity learning.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-navy-700">
+                                    <i data-lucide="chevron-right" class="w-5 h-5 text-accent-500 shrink-0 mt-0.5"></i>
+                                    <span>Explored AI-assisted features for cybersecurity learning, analysis, and automation.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-navy-700">
+                                    <i data-lucide="chevron-right" class="w-5 h-5 text-accent-500 shrink-0 mt-0.5"></i>
+                                    <span>Designed the project around making cybersecurity resources more accessible through a centralized platform.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="flex flex-col bg-navy-50 rounded-2xl border border-navy-100 overflow-hidden shadow-sm hover:shadow-card-hover transition-all duration-300">
+                        <div class="p-8 flex-grow">
+                            <div class="w-14 h-14 rounded-xl bg-navy-900 text-white flex items-center justify-center mb-6">
+                                <i data-lucide="layout-template" class="w-7 h-7"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy-900 mb-2">CampusOne</h3>
+                            <p class="text-xs font-semibold text-accent-600 mb-4 uppercase tracking-wider">Academic Platform</p>
+                            <p class="text-navy-700 mb-6 leading-relaxed">
+                                A web-based academic/project platform developed to provide practical experience in web development and project implementation.
+                            </p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3 text-navy-700">
+                                    <i data-lucide="chevron-right" class="w-5 h-5 text-accent-500 shrink-0 mt-0.5"></i>
+                                    <span>Web-based platform development</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-navy-700">
+                                    <i data-lucide="chevron-right" class="w-5 h-5 text-accent-500 shrink-0 mt-0.5"></i>
+                                    <span>Practical project implementation</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-navy-700">
+                                    <i data-lucide="chevron-right" class="w-5 h-5 text-accent-500 shrink-0 mt-0.5"></i>
+                                    <span>Problem-solving and development experience</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cybersecurity Practice Section -->
+        <section id="practice" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <div class="reveal-up">
+                <div class="mb-16 md:text-center">
+                    <h2 class="text-3xl font-bold tracking-tight text-navy-900 mb-4">Cybersecurity Practice</h2>
+                    <p class="text-lg text-navy-600 max-w-2xl md:mx-auto">Hands-on experience and laboratory exercises performed in authorized environments.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                    <div class="bg-white p-8 rounded-2xl border border-navy-100 shadow-sm flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-full bg-accent-50 border border-accent-100 flex items-center justify-center shrink-0">
+                            <i data-lucide="terminal" class="w-5 h-5 text-accent-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-navy-900 mb-2">Linux & Virtualized Security Labs</h3>
+                            <p class="text-navy-700 leading-relaxed">Hands-on practice with Linux fundamentals and virtualized security lab environments using VirtualBox.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-navy-100 shadow-sm flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-full bg-accent-50 border border-accent-100 flex items-center justify-center shrink-0">
+                            <i data-lucide="radar" class="w-5 h-5 text-accent-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-navy-900 mb-2">Network Reconnaissance</h3>
+                            <p class="text-navy-700 leading-relaxed">Practiced network reconnaissance using Nmap in authorized laboratory environments.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-navy-100 shadow-sm flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-full bg-accent-50 border border-accent-100 flex items-center justify-center shrink-0">
+                            <i data-lucide="activity" class="w-5 h-5 text-accent-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-navy-900 mb-2">Traffic Analysis</h3>
+                            <p class="text-navy-700 leading-relaxed">Practiced network traffic analysis using Wireshark in authorized lab environments.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-navy-100 shadow-sm flex items-start gap-5">
+                        <div class="w-12 h-12 rounded-full bg-accent-50 border border-accent-100 flex items-center justify-center shrink-0">
+                            <i data-lucide="globe-lock" class="w-5 h-5 text-accent-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-navy-900 mb-2">Web Security</h3>
+                            <p class="text-navy-700 leading-relaxed">Studied common web application security risks using the OWASP Top 10 framework.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 bg-accent-50 border border-accent-100 rounded-xl p-5 flex items-start sm:items-center gap-4 shadow-sm">
+                    <div class="bg-white p-2 rounded-lg border border-accent-200 shrink-0">
+                        <i data-lucide="info" class="w-5 h-5 text-accent-600"></i>
+                    </div>
+                    <p class="text-sm sm:text-base text-accent-900"><strong>Note:</strong> All security testing and practice activities were strictly performed in authorized, isolated laboratory environments.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests & Languages Section -->
+        <section id="interests" class="py-20 bg-white border-y border-navy-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal-up">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+                    <div>
+                        <h2 class="text-2xl font-bold tracking-tight text-navy-900 mb-8 flex items-center gap-3">
+                            <div class="p-2 rounded-lg bg-navy-50 border border-navy-100">
+                                <i data-lucide="compass" class="w-5 h-5 text-accent-600"></i>
+                            </div>
+                            Areas of Interest
+                        </h2>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2.5 bg-navy-50 text-navy-800 border border-navy-200 rounded-lg text-sm font-medium shadow-sm">SOC Operations</span>
+                            <span class="px-4 py-2.5 bg-navy-50 text-navy-800 border border-navy-200 rounded-lg text-sm font-medium shadow-sm">Network Security</span>
+                            <span class="px-4 py-2.5 bg-navy-50 text-navy-800 border border-navy-200 rounded-lg text-sm font-medium shadow-sm">Threat Monitoring</span>
+                            <span class="px-4 py-2.5 bg-navy-50 text-navy-800 border border-navy-200 rounded-lg text-sm font-medium shadow-sm">Vulnerability Assessment</span>
+                            <span class="px-4 py-2.5 bg-navy-50 text-navy-800 border border-navy-200 rounded-lg text-sm font-medium shadow-sm">Ethical Hacking</span>
+                            <span class="px-4 py-2.5 bg-navy-50 text-navy-800 border border-navy-200 rounded-lg text-sm font-medium shadow-sm">Digital Forensics</span>
+                            <span class="px-4 py-2.5 bg-navy-50 text-navy-800 border border-navy-200 rounded-lg text-sm font-medium shadow-sm">Cloud Security</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold tracking-tight text-navy-900 mb-8 flex items-center gap-3">
+                            <div class="p-2 rounded-lg bg-navy-50 border border-navy-100">
+                                <i data-lucide="languages" class="w-5 h-5 text-accent-600"></i>
+                            </div>
+                            Languages
+                        </h2>
+                        <div class="bg-navy-50 rounded-2xl p-8 border border-navy-100 shadow-sm">
+                            <ul class="space-y-5">
+                                <li class="flex items-center gap-4">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-accent-500"></div>
+                                    <span class="text-lg text-navy-900 font-medium">English</span>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-navy-400"></div>
+                                    <span class="text-lg text-navy-900 font-medium">Malayalam</span>
+                                </li>
+                                <li class="flex items-center gap-4">
+                                    <div class="w-2.5 h-2.5 rounded-full bg-navy-400"></div>
+                                    <span class="text-lg text-navy-900 font-medium">Tamil</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <div class="reveal-up bg-navy-900 rounded-3xl overflow-hidden relative shadow-2xl">
+                <!-- Decorative Elements -->
+                <div class="absolute top-0 right-0 w-80 h-80 bg-accent-600 rounded-full blur-[120px] opacity-20 transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 w-80 h-80 bg-accent-400 rounded-full blur-[120px] opacity-10 transform -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+                
+                <div class="relative p-10 sm:p-12 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+                    <div class="lg:w-1/2 w-full">
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-6">Let's Connect</h2>
+                        <p class="text-lg text-navy-200 leading-relaxed mb-10">
+                            I am open to cybersecurity internship opportunities, learning opportunities, and technical collaborations.
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <a href="mailto:mohammedhisham962@gmail.com" class="flex items-center gap-5 text-navy-100 hover:text-white transition-colors group w-fit">
+                                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-accent-600 transition-colors shrink-0">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <span class="font-medium text-lg break-all">mohammedhisham962@gmail.com</span>
+                            </a>
+                            
+                            <a href="tel:+919626828157" class="flex items-center gap-5 text-navy-100 hover:text-white transition-colors group w-fit">
+                                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-accent-600 transition-colors shrink-0">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <span class="font-medium text-lg">+91 9626828157</span>
+                            </a>
+                            
+                            <div class="flex items-center gap-5 text-navy-100">
+                                <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <span class="font-medium text-lg">The Nilgiris, Tamil Nadu, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-2/5 w-full flex flex-col gap-5">
+                        <a href="https://www.linkedin.com/in/mohammed-hisham-00314737a" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 w-full py-4 px-6 bg-accent-600 hover:bg-accent-500 border border-accent-500 rounded-xl text-white font-medium text-lg transition-all shadow-lg shadow-accent-600/20 group">
+                            <i data-lucide="linkedin" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                            LinkedIn Profile
+                        </a>
+                        <a href="https://github.com/mohammedhisham962-sys" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 w-full py-4 px-6 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white font-medium text-lg transition-all backdrop-blur-sm group">
+                            <i data-lucide="github" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                            GitHub Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-navy-100 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <h2 class="text-xl font-bold text-navy-900 mb-2">Mohammed Hisham</h2>
+            <p class="text-navy-600 mb-8 font-medium text-sm">Cybersecurity Student | SOC & Network Security Intern Candidate</p>
+            
+            <div class="flex items-center gap-8 mb-10">
+                <a href="https://github.com/mohammedhisham962-sys" target="_blank" rel="noopener noreferrer" class="text-navy-400 hover:text-navy-900 transition-colors">
+                    <span class="sr-only">GitHub</span>
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mohammed-hisham-00314737a" target="_blank" rel="noopener noreferrer" class="text-navy-400 hover:text-accent-600 transition-colors">
+                    <span class="sr-only">LinkedIn</span>
+                    <i data-lucide="linkedin" class="w-6 h-6"></i>
+                </a>
+                <a href="mailto:mohammedhisham962@gmail.com" class="text-navy-400 hover:text-accent-600 transition-colors">
+                    <span class="sr-only">Email</span>
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </a>
+            </div>
+            
+            <p class="text-navy-500 text-sm">
+                &copy; <span id="year"></span> Mohammed Hisham. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
